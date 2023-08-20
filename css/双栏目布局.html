@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双栏目布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+        .container{
+            /*主要特点：一侧栏固定，另一侧栏宽度自适应。
+              我们使用float+margin的方式去实现，左侧栏浮动，右侧设置左外边距。
+              */
+          background-color: white;  
+        }
+        .left{
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+
+        }
+        .right{
+            margin-left: 230px;
+            height: 200px;
+            background-color: #bfa;
+        }
+        .last{
+            height: 30px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">左侧内容</div><div class="right">右侧内容</div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="last">后面内容</div>
+</body>
+</html>

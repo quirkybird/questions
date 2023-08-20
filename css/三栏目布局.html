@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三栏目布局</title>
+    <style>
+        /*
+        实现思路：
+            设置父元素为相对定位，左右两栏采用绝对定位，分别固定于页面的左右两侧
+            中间的主体栏用左右margin值撑开距离 
+         */
+        .box {
+            position: relative;
+            
+        }
+        .middle{
+            height:200px;
+            margin-left: 220px;
+            margin-right: 220px;
+            background-color: blueviolet;
+
+        }
+        .left{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            position: absolute;
+            left: 0;
+        }
+        .right{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .last{
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left">左边内容</div>
+        <div class="middle">中间内容</div>
+        <div class="right">右边内容</div>
+    </div>
+    <div class="last">尾部内容</div>
+</body>
+</html>
